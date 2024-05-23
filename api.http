@@ -1,0 +1,34 @@
+###get all movies
+GET http://localhost:1234/movies
+
+###movie for ID
+GET http://localhost:1234/movies/5ad1a235-0d9c-410a-b32b-220d91689a08
+
+###movie by gender
+GET http://localhost:1234/movies?gender=Fantasy
+
+###create movie
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+    "title": "137",
+    "year": 2024,
+    "director": "Marcos Casas",
+    "duration": 165,
+    "poster": "https://i.etsystatic.com/35681979/r/il/dfe3ba/3957859451/il_fullxfull.3957859451_h27r.jpg",
+    "genre": ["Action"],
+    "rate": 9.9
+}
+
+###update movie
+PATCH http://localhost:1234/movies/c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf
+Content-Type: application/json
+
+{
+    "year": 2024,
+    "rate": 7.7
+}
+###delete movie
+DELETE http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
